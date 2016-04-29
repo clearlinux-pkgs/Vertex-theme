@@ -4,7 +4,7 @@
 #
 Name     : Vertex-theme
 Version  : 20150923
-Release  : 7
+Release  : 8
 URL      : https://github.com/horst3180/Vertex-theme/archive/20150923.tar.gz
 Source0  : https://github.com/horst3180/Vertex-theme/archive/20150923.tar.gz
 Summary  : No detailed summary available
