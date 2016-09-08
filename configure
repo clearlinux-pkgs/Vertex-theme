@@ -1,1 +1,1 @@
---disable-cinnamon --disable-gnome-shell --disable-gtk3 --disable-metacity --disable-unity --enable-xfwm
+--disable-cinnamon --disable-gnome-shell --enable-gtk3 --disable-metacity --disable-unity --enable-xfwm --with-gnome=3.20
