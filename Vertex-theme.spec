@@ -4,13 +4,14 @@
 #
 Name     : Vertex-theme
 Version  : 20170128
-Release  : 13
+Release  : 14
 URL      : https://github.com/horst3180/Vertex-theme/archive/20170128.tar.gz
 Source0  : https://github.com/horst3180/Vertex-theme/archive/20170128.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : GPL-3.0 LGPL-2.1
 Requires: Vertex-theme-data
+Requires: murrine
 
 %description
 *************
@@ -30,8 +31,11 @@ data components for the Vertex-theme package.
 %setup -q -n vertex-theme-20170128
 
 %build
+export http_proxy=http://127.0.0.1:9/
+export https_proxy=http://127.0.0.1:9/
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1487260908
+export SOURCE_DATE_EPOCH=1507678519
 %autogen --disable-static --disable-cinnamon --disable-gnome-shell --enable-gtk3 --disable-metacity --disable-unity --enable-xfwm --with-gnome=3.20
 make V=1  %{?_smp_mflags}
 
@@ -39,11 +43,11 @@ make V=1  %{?_smp_mflags}
 export LANG=C
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
-export no_proxy=localhost
+export no_proxy=localhost,127.0.0.1,0.0.0.0
 make VERBOSE=1 V=1 %{?_smp_mflags} check
 
 %install
-export SOURCE_DATE_EPOCH=1487260908
+export SOURCE_DATE_EPOCH=1507678519
 rm -rf %{buildroot}
 %make_install
 
